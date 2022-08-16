@@ -1,0 +1,73 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb pl-0" style="background: none;">
+        <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+    </ol>
+</nav>
+<h5 class="font-weight-bold">Dashboard</h5>
+<div class="list-order">
+    <div class="order d-flex flex-row mt-4 mb-3">
+        <img src="./img/Rectangle 9.png">
+        <h6 class="ml-2">List Order</h6>
+    </div>
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>User Email</th>
+                <th>Car</th>
+                <th>Start Rent</th>
+                <th>Finish Rent</th>
+                <th>Price</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let x = 0; x < dataOrder.length; x++) {%>
+                <tr>
+                    <td><%= x+1%></td>
+                    <td><%= dataOrder[x].email %></td>
+                    <td><%= dataOrder[x].car %> </td>
+                    <td><%= dataOrder[x].startrent %></td>
+                    <td><%= dataOrder[x].finishrent %></td>
+                    <td><%= dataOrder[x].harga %></td>
+                    <td><%= dataOrder[x].status %></td>
+                </tr>
+            <% } %> 
+        </tbody>
+    </table>
+</div>
+<div class="list-car">
+    <div class="order d-flex flex-row mt-4 mb-3">
+        <img src="./img/Rectangle 9.png">
+        <h6 class="ml-2">List Car</h6>
+    </div>
+    <table id="example2" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Start Rent</th>
+                <th>Finish Rent</th>
+                <th>Created at</th>
+                <th>Updated at</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let x = 0; x < data.length; x++) {%>
+            <tr>
+                <td><%= x+1%></td>
+                <td><%= data[x].nama %></td>
+                <td><%= data[x].kategori  %> </td>
+                <td><%= data[x].harga %></td>
+                <td><%= data[x].startrent %></td>
+                <td><%= data[x].finishrent %></td>
+                <td><%= data[x].createdat %></td>
+                <td><%= data[x].updatedat %></td>
+            </tr>
+            <% } %> 
+        </tbody>
+    </table>
+</div>

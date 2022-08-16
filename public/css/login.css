@@ -1,0 +1,31 @@
+/* Reset */
+
+body {
+    margin: 0;
+    background-color: #0D28A6;
+    height: 100%;
+}
+
+
+/* BG */
+
+.background {
+    background: url('../img/car2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    left: -17%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 75%;
+}
+
+.content {
+    padding: 12% 2%;
+    background-color: white;
+    width: 31%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}

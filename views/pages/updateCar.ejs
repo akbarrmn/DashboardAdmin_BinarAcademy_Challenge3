@@ -1,0 +1,77 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb pl-0" style="background: none;">
+        <li class="breadcrumb-item"><a href="/cars">Cars</a></li>
+        <li class="breadcrumb-item"><a href="/cars">List Car</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Update Car</li>
+    </ol>
+</nav>
+<h5 class="font-weight-bold mb-0">Update Car</h5>
+<form class="mt-4" method="POST" action="/cars/update/<%=updateData[0].id %>" >
+    <div class="form-data" style="background-color: white; padding: 2rem;">
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <input type="hidden" class="form-control" name="id" id="id" placeholder="id" value='<%=updateData[0].id %>'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="nama" id="name" placeholder="Nama" value='<%=updateData[0].nama %>'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
+            <div class="col-sm-10">
+                <select name="kategori" required class="form-control">
+                    <option>Pilih Kategori</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="harga" id="harga" placeholder="Harga" value='<%=updateData[0].harga %>'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="harga" class="col-sm-2 col-form-label">Foto</label>
+            <div class="input-group col-sm-10" id="harga">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="foto" name="foto" value='<%=updateData[0].foto %>'>
+                  <label class="custom-file-label" for="foto">Choose file</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="startrent" class="col-sm-2 col-form-label">Start Rent</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" name="startrent" id="startrent" value='<%=updateData[0].startrent %>'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="finishrent" class="col-sm-2 col-form-label">Finish Rent</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" name="finishrent" id="finishrent" value='<%=updateData[0].finishrent %>'>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="createdat" class="col-sm-2 col-form-label">Created at</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="createdat" id="createdat" value='<%=updateData[0].createdat %>' readonly>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="updatedat" class="col-sm-2 col-form-label">Updated at</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="updatedat" id="updatedat" value='<%=updateData[0].updatedat %>' readonly>
+            </div>
+        </div>
+    </div>
+    <div class="form-button mt-5 d-flex">
+        <a href="/cars"><button type="button" class="btn btn-outline-primary mr-2 cancel">Cancel</button></a>
+        <button type="submit" class="btn btn-outline-primary save">Save</button>
+    </div>
+</form>

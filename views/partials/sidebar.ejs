@@ -1,0 +1,36 @@
+<div class="fixed-side">
+    <img src="/img/Rectangle 63.png" class="logo mb-4">
+    <form action="/cars" method="post">
+        <div class="dashboard" id="dashboard">
+            <a href="/dashboard">
+                <ul class="m-0 p-0">
+                    <li><img src="/img/fi_home.png"></li>
+                    <li><span>Dashboard</span></li>
+                </ul>
+            </a>
+        </div>
+        <div class="cars mt-3" id="cars">
+            <a href="/cars">
+                <ul class="m-0 p-0">
+                    <li><img src="/img/fi_truck.png"></li>
+                    <li><span>Cars</span></li>
+                </ul>
+            </a>
+        </div>
+    </form>
+</div>
+<div id="sidebar">
+    <div class="shadow-sm sidebar-header">
+        <img src="/img/Rectangle 62.png" alt="">
+    </div>
+    <p class="lead pb-0 dashboard-lead">
+        <%=sidebar %> 
+    </p>
+    <ul class="lisst-unstyled components">
+        <li class="active">
+            <a href="#" class="item-menu" aria-expanded="true">
+                <%=subSidebar %> 
+            </a>
+        </li>
+    </ul>
+</div>

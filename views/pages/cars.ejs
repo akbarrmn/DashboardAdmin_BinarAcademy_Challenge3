@@ -1,0 +1,74 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb pl-0 m-0" style="background: none;">
+        <li class="breadcrumb-item"><a href="/cars">Cars</a></li>
+        <li class="breadcrumb-item active" aria-current="page">List Car</li>
+    </ol>
+</nav>
+<% if (messageSuccess.length>0) { %>
+    <div class="alert alert-success text-center" style="background-color: #73CA5C;" id="alert" role="alert">
+        <p class="mb-0" style="color:white;"><%=messageSuccess %>  </p>
+    </div>
+<% } %> 
+<% if (messageDelete.length>0) { %>
+    <div class="alert alert-success text-center" style="background-color: black;" id="alert" role="alert">
+        <p class="mb-0" style="color:white;"><%=messageDelete %>  </p>
+    </div>
+<% } %> 
+<div class="mb-4 d-flex align-items-center justify-content-between">
+    <h5 class="font-weight-bold mb-0">List Car</h5>
+    <a href="/add-new-car">
+        <button class="btn btn-primary add-cars" name="addCars"><i class="fas fa-plus mr-2"></i> Add New Car</button>
+    </a>
+</div>
+<div class="button-cars">
+    <button class="btn btn-primary">All</button>
+    <button class="btn btn-primary">Small</button>
+    <button class="btn btn-primary">Medium</button>
+    <button class="btn btn-primary">Large</button>
+</div>
+<div class="car-list mt-4">
+    <div class="row">
+        <% data.forEach(item => { %>
+            <div class="modal fade" id="<%=item.modal  %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content text-center px-5 py-5">
+                        <img src="/img/beep.png" style="width: 153px; height: 121px; margin: 0 auto;">
+                        <div class="header mt-4">
+                            <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Menghapus Data Mobil</h5>
+                        </div>
+                        <div class="body mt-3">
+                            Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?
+                        </div>
+                        <div class="footer mt-3">
+                            <form method="post">
+                                <a href="/cars/delete/<%=item.id %>" class="btn btn-primary mr-2" name="delete">Ya</a>
+                                <button type="button" class="btn btn-secondary decline"  data-dismiss="modal">Tidak</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-4">
+                <div class="card">
+                    <img class="card-img-top px-3 py-3" src="/img/image 1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p><%=item.nama %> / <%=item.kategori  %> </p>
+                        <h5>Rp <%=item.harga %> / hari</h5>
+                        <div class="rent">
+                            <h6><img src="/img/fi_key.png" class="mr-2">(<%=item.startrent %>) - (<%=item.finishrent %>)</h6>
+                        </div>
+                        <div class="update">
+                            <h6><img src="./img/fi_clock.png" class="mr-2">Updated at <%=item.updatedat  %> </h6>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-danger delete" data-toggle="modal" data-target="#<%=item.modal%>"><i class="fas fa-trash mr-2"></i>Hapus</button>
+                            <a href=<%="/cars/update/" + item.id %> class="btn edit ml-2"><i class="fas fa-edit mr-2"></i>Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+

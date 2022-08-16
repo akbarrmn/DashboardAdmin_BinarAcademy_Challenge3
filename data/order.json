@@ -1,0 +1,83 @@
+[
+    {
+    "email": "akbar@gmail.com",
+    "car": "Mazda",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "budi@gmail.com",
+    "car": "Maserati",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "dodo@gmail.com",
+    "car": "Ferari",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "ruri@gmail.com",
+    "car": "Avanza",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "yudi@gmail.com",
+    "car": "Lamborghini",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "upi@gmail.com",
+    "car": "Honda",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "rara@gmail.com",
+    "car": "Veloz",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "reza@gmail.com",
+    "car": "Civic",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "budi@gmail.com",
+    "car": "Bugatti",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    },
+    {
+    "email": "udil@gmail.com",
+    "car": "Mclaren",
+    "startrent": "2022-03-24",
+    "finishrent": "2022-03-28",
+    "harga": "Rp200.000",
+    "status": "On rent"
+    }
+
+]
